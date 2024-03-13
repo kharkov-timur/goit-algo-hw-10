@@ -12,7 +12,7 @@ model = LpProblem("Максимізація_виробництва", LpMaximize)
 model += 2 * limonad + frukt_sik <= 100, "Обмеження_на_воду"
 model += limonad + frukt_sik <= 50, "Обмеження_на_цукор"
 model += limonad <= 30, "Обмеження_на_лимонний_сік"
-model += 2 * frukt_sik + limonad <= 40, "Обмеження_на_фруктове_пюре"
+model += 2 * frukt_sik <= 40, "Обмеження_на_фруктове_пюре"
 
 # Функція максимізації
 model += limonad + frukt_sik
